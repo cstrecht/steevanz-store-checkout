@@ -1,0 +1,30 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+.navbar {
+  position: relative;
+  top: 0;
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 16px;
+}
+
+form > input:nth-child(5) {
+  grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+.forms {
+  display: flex;
+  justify-content: space-around;
+}
