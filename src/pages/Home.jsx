@@ -11,7 +11,7 @@ function Home() {
         This is the main page. Talks about a product. Once You click the button,
         it starts the buying proccess.
       </p>
-      <button onClick={() => navigate("/page1")}>Subscribe</button>
+      <button onClick={() => navigate("/cart")}>Subscribe</button>
     </div>
   );
 }

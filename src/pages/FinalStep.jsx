@@ -6,7 +6,7 @@ const FinalStep = () => {
   return (
     <>
       <h1>Final page</h1>
-      <button onClick={() => navigate("/page1")}>Home</button>
+      <button onClick={() => navigate("/")}>Home</button>
     </>
   );
 };

@@ -13,7 +13,7 @@ const FirstStep = () => {
 
       <div>
         <button>Clean Cart</button>
-        <button onClick={() => navigate("/page2")}>Next</button>
+        <button onClick={() => navigate("/informations")}>Next</button>
       </div>
     </>
   );

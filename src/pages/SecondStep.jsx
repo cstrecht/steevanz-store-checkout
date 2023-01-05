@@ -1,48 +1,60 @@
 import React from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import DataInput from "../components/DataForm/DataInput";
+import dataInputs from "../components/DataForm/dataInputs";
+import CountryInput from "../components/DataForm/CountryInput";
 
 function SecondStep() {
   const navigate = useNavigate();
+  const [values, setValues] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    country: "",
+    location: "",
+    address: "",
+    postalcode: "",
+    vatnumber: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/card-details");
+  };
+
+  const onChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
+
+  console.log(values);
   return (
     <>
       <h1>Second Step - Your Data</h1>
       <div>
-        <button>Personal</button>
-        <button>Company</button>
+        <button className="bg-red-300 mx-5">Personal</button>
+        <button className="bg-red-300 mx-5">Company</button>
       </div>
 
-      {/* make this form a component */}
-
-      <div className="forms">
+      <form className="m-8" onSubmit={handleSubmit}>
+        {dataInputs.map((input) => (
+          <React.Fragment key={input.id}>
+            <DataInput
+              {...input}
+              value={values[input.name]}
+              onChange={onChange}
+            />
+          </React.Fragment>
+        ))}
+        <CountryInput />
         <div>
-          <form>
-            <input type="firstname" placeholder="Firstname" />
-            <input type="lastname" placeholder="Lastname" />
-            <input type="email" placeholder="Email" />
-            <input type="phone" placeholder="Phone" />
-            <input type="country" placeholder="Country" />
-            <input type="location" placeholder="Location" />
-            <input type="address" placeholder="Address" />
-            <input type="postalcode" placeholder="Postal code" />
-            <input type="vatnumber" placeholder="VAT number" />
-          </form>
-          <input type="checkbox" />
-          <label htmlFor="checkbox">Add a delivery address...</label>
+          <button onClick={() => navigate(-1)}>Prev</button>
+          <button>
+            <input type="submit" value="Next" />
+          </button>
         </div>
-
-        <div>
-          <p>Is this purchase an offer?</p>
-          <input type="text" placeholder="from" />
-          <input type="text" placeholder="to" />
-          <input type="text" placeholder="Your message" />
-        </div>
-      </div>
-
-      {/* make this prev and next buttons a component */}
-      <div>
-        <button onClick={() => navigate(-1)}>Previous</button>
-        <button onClick={() => navigate("/page3")}>Next</button>
-      </div>
+      </form>
     </>
   );
 }

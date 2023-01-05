@@ -14,10 +14,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/page1" element={<FirstStep />} />
-        <Route path="/page2" element={<SecondStep />} />
-        <Route path="/page3" element={<ThirdStep />} />
-        <Route path="/page4" element={<FinalStep />} />
+        <Route path="/cart" element={<FirstStep />} />
+        <Route path="/informations" element={<SecondStep />} />
+        <Route path="/card-details" element={<ThirdStep />} />
+        <Route path="/success" element={<FinalStep />} />
       </Routes>
     </Router>
   );
