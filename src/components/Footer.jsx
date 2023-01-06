@@ -14,20 +14,30 @@ const Footer = () => {
         <img src={logo} alt="Steevanz logo" className="w-[211px]" />
       </div>
       <div className="flex flex-col text-[16px] leading-7">
-        <a href="">Who We Are</a>
-        <a href="">FAQs</a>
-        <a href="">Contacts</a>
+        <a href="https://steevanz.com">Who We Are</a>
+        <a href="https://steevanz.com">FAQs</a>
+        <a href="https://steevanz.com">Contacts</a>
       </div>
       <div className="flex flex-col leading-7">
-        <a href="">Complaints Book</a>
-        <a href="">Terms and Conditions</a>
+        <a href="https://steevanz.com">Complaints Book</a>
+        <a href="https://steevanz.com">Terms and Conditions</a>
       </div>
       <div className="flex space-x-4 align-bottom items-center">
-        <img className="h-[24px]" src={facebook} alt="Facebook" />
-        <img className="h-[24px]" src={instagram} alt="Instagram" />
-        <img className="h-[24px]" src={twitter} alt="Twitter" />
-        <img className="h-[24px]" src={linkedin} alt="LinkedIn" />
-        <img className="h-[24px]" src={youtube} alt="Youtube" />
+        <a href="https://steevanz.com">
+          <img className="h-[24px]" src={facebook} alt="Facebook" />
+        </a>
+        <a href="https://steevanz.com">
+          <img className="h-[24px]" src={instagram} alt="Instagram" />
+        </a>
+        <a href="https://steevanz.com">
+          <img className="h-[24px]" src={twitter} alt="Twitter" />
+        </a>
+        <a href="https://steevanz.com">
+          <img className="h-[24px]" src={linkedin} alt="LinkedIn" />
+        </a>
+        <a href="https://steevanz.com">
+          <img className="h-[24px]" src={youtube} alt="Youtube" />
+        </a>
       </div>
     </footer>
   );
