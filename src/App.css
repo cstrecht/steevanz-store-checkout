@@ -1,10 +1,10 @@
-span {
+.span-error {
   color: red;
   display: none;
 }
 input:invalid[focused="true"] {
   border: 1px solid red;
 }
-input:invalid[focused="true"] ~ span {
+input:invalid[focused="true"] ~ .span-error {
   display: block;
 }

@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .subscribe-btn {
+    @apply border border-white rounded-full py-[5px] px-[30px] text-[20px] uppercase hover:bg-white hover:text-steevanz-black;
+  }
+
+  .screen {
+    @apply bg-steevanz-black h-fit flex-col;
+  }
+}

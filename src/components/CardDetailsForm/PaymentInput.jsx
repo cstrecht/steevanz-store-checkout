@@ -22,7 +22,7 @@ function PaymentInput(props) {
           focused={focused.toString()}
           required
         />
-        <span>{errorMessage}</span>
+        <span className="span-error">{errorMessage}</span>
       </div>
     </>
   );
