@@ -1,8 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+
+//-- React Components --
 import paymentInputs from "../components/CardDetailsForm/paymentInputs";
 import PaymentInput from "../components/CardDetailsForm/PaymentInput";
+import Navbar from "../components/Navbar";
 
 function ThirdStep() {
   const navigate = useNavigate();
@@ -24,6 +27,7 @@ function ThirdStep() {
 
   return (
     <>
+      <Navbar />
       <h1>Third Step - Payment</h1>
 
       <form className="m-8" onSubmit={handleSubmit}>

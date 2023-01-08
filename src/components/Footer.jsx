@@ -9,7 +9,7 @@ import youtube from "../assets/youtube.svg";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col md:flex-row md:justify-around absolute pt-[59px] w-full h-fit md:h-[166px] bottom-0 bg-steevanz-black shadow-2xl z-10 font-roboto text-white">
+    <footer className="bg-steevanz-black bottom-0  z-20 w-full flex justify-around text-white font-roboto h-[166px] items-center">
       <div>
         <img src={logo} alt="Steevanz logo" className="w-[211px]" />
       </div>

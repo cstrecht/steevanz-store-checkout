@@ -7,6 +7,9 @@ module.exports = {
     colors: {
       "steevanz-black": "#1A1A1A",
       white: "#FFFFFF",
+      "steevanz-gold": "#C6B784",
+      "steevanz-gray": "#5B5B5B",
+      "steevanz-light-gray": "#E9E9E9",
     },
     extend: {
       fontFamily: {
