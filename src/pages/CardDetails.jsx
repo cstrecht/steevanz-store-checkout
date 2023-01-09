@@ -1,9 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-
-//-- React Components --
-
 import CardDetailsForm from "../components/CardDetailsForm";
 import Navbar from "../components/Navbar";
 import group3 from "../assets/group3.svg";
@@ -14,28 +9,9 @@ import Footer from "../components/Footer";
 import downarrow from "../assets/downarrow.svg";
 
 function CardDetails() {
-  const navigate = useNavigate();
-
-  const [values, setValues] = useState({
-    cardnumber: "",
-    expirationdate: "",
-    cvc: "",
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    navigate("/checkout");
-  };
-
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
-
   return (
     <>
       <Navbar />
-
       <div className="flex absolute mt-[73px] justify-between items-center px-[40px] py-[12px] text-[24px] w-full bg-steevanz-black text-white h-[80px]">
         <h1>Checkout</h1>
         <div>
@@ -57,15 +33,12 @@ function CardDetails() {
           </span>
         </div>
       </div>
-
       <div className="m-[40px]">
-        {" "}
         <div className="">
           <div className="flex">
             <img src={icon4} alt="icon number 2" />
             <span className="text-[24px] pl-[10px] font-light">Payment</span>
           </div>
-
           <div className="flex justify-between pt-[30px]">
             <div className="flex">
               <img src={visa} alt="" />
@@ -84,9 +57,7 @@ function CardDetails() {
           </div>
         </div>
         <CardDetailsForm />
-        {/* make this prev and next buttons a component */}
       </div>
-
       <Footer />
     </>
   );

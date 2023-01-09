@@ -74,14 +74,20 @@ const Cart = () => {
           </span>
         </div>
       </div>
-      <div className="flex justify-between px-[40px] mt-[50px] mb-[90px]">
-        <button className="light-btn" onClick={() => navigate("/")}>
-          Clean Cart
-        </button>
-        <button onClick={() => navigate("/informations")} className="dark-btn">
-          Next
-        </button>
+      <div className="px-[40px]">
+        <div className="navigation-buttons">
+          <button className="light-btn" onClick={() => navigate("/")}>
+            Clean Cart
+          </button>
+          <button
+            onClick={() => navigate("/informations")}
+            className="dark-btn"
+          >
+            Next
+          </button>
+        </div>
       </div>
+
       <Footer />
     </>
   );

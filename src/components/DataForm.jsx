@@ -16,21 +16,20 @@ function DataForm() {
 
   const onSubmit = (data) => {
     console.log(data);
-    // the reset method clears all the values
     navigate("/card-details");
     reset();
   };
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex flex-col md:flex-row md:justify-between">
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 pt-6 md:pt-[84px]">
+        <div className="data-form-page">
+          <div className="data-form-grid">
             <div className="md:col-span-1">
               <label className="label">Firstname(s)*</label>
               <br />
               <input
                 type="text"
-                className="border-b-[1px] border-b-steevanz-black w-full"
+                className="data-form-input"
                 {...register("firstname", {
                   required: "Firstname is required.",
                   pattern: {
@@ -42,19 +41,19 @@ function DataForm() {
                   trigger("firstname");
                 }}
               />
+              <br />
               {errors.firstname && (
                 <small className="text-danger-red">
                   {errors.firstname.message}
                 </small>
               )}
             </div>
-
             <div className="md:col-span-1">
               <label className="label">Lastname(s)*</label>
               <br />
               <input
                 type="text"
-                className="border-b-[1px] border-b-steevanz-black w-full"
+                className="data-form-input"
                 {...register("lastname", {
                   required: "Lastname is required.",
                   pattern: {
@@ -66,19 +65,19 @@ function DataForm() {
                   trigger("lastname");
                 }}
               />
+              <br />
               {errors.lastname && (
                 <small className="text-danger-red">
                   {errors.lastname.message}
                 </small>
               )}
             </div>
-
             <div className="md:col-span-1">
               <label className="label">Email*</label>
               <br />
               <input
                 type="text"
-                className="border-b-[1px] border-b-steevanz-black w-full"
+                className="data-form-input"
                 {...register("email", {
                   required: "Email is required.",
                   pattern: {
@@ -90,6 +89,7 @@ function DataForm() {
                   trigger("email");
                 }}
               />
+              <br />
               {errors.email && (
                 <small className="text-danger-red">
                   {errors.email.message}
@@ -101,7 +101,7 @@ function DataForm() {
               <br />
               <input
                 type="text"
-                className="border-b-[1px] border-b-steevanz-black w-full"
+                className="data-form-input"
                 {...register("phone", {
                   required: "Phone number is required.",
                   pattern: {
@@ -121,25 +121,24 @@ function DataForm() {
                   trigger("phone");
                 }}
               />
+              <br />
               {errors.phone && (
                 <small className="text-danger-red">
                   {errors.phone.message}
                 </small>
               )}
             </div>
-
             <div className="md:col-span-1">
               <label className="label">Country*</label>
               <br />
               <CountryInput />
             </div>
-
             <div className="md:col-span-1">
               <label className="label">Location*</label>
               <br />
               <input
                 type="text"
-                className="border-b-[1px] border-b-steevanz-black w-full"
+                className="data-form-input"
                 {...register("location", {
                   required: "Location is required.",
                 })}
@@ -147,6 +146,7 @@ function DataForm() {
                   trigger("location");
                 }}
               />
+              <br />
               {errors.location && (
                 <small className="text-danger-red">
                   {errors.location.message}
@@ -158,7 +158,7 @@ function DataForm() {
               <br />
               <input
                 type="text"
-                className="border-b-[1px] border-b-steevanz-black w-full"
+                className="border-b-[1px] border-b-steevanz-black w-[325px] xl:w-full"
                 {...register("address", {
                   required: "Address is required.",
                 })}
@@ -166,6 +166,7 @@ function DataForm() {
                   trigger("address");
                 }}
               />
+              <br />
               {errors.address && (
                 <small className="text-danger-red">
                   {errors.address.message}
@@ -177,7 +178,7 @@ function DataForm() {
               <br />
               <input
                 type="text"
-                className="border-b-[1px] border-b-steevanz-black w-full"
+                className="data-form-input"
                 {...register("postalcode", {
                   required: "Postal code is required.",
                   pattern: {
@@ -189,6 +190,7 @@ function DataForm() {
                   trigger("postalcode");
                 }}
               />
+              <br />
               {errors.postalcode && (
                 <small className="text-danger-red">
                   {errors.postalcode.message}
@@ -200,7 +202,7 @@ function DataForm() {
               <br />
               <input
                 type="text"
-                className="border-b-[1px] border-b-steevanz-black w-full"
+                className="data-form-input"
                 {...register("vat", {
                   required: "VAT number is required.",
                   pattern: {
@@ -212,19 +214,23 @@ function DataForm() {
                   trigger("vat");
                 }}
               />
+              <br />
               {errors.vat && (
                 <small className="text-danger-red">{errors.vat.message}</small>
               )}
             </div>
           </div>
-
           <div className="flex flex-col">
             <div className="pt-[80px] text-steevanz-black">
               <div className="absolute">
                 <div className="md:text-[20px]">Is this purchase an offer?</div>
                 <div className="text-[14px]">Add a custom message</div>
               </div>
-              <img className="relative -mt-4 mb-[40px]" src={offer} alt="" />
+              <img
+                className="relative -mt-4 mb-[40px]"
+                src={offer}
+                alt="Gift"
+              />
             </div>
             <div className="grid grid-cols-2">
               <div>
@@ -249,21 +255,21 @@ function DataForm() {
                 <input
                   type="textarea"
                   rows="4"
-                  className="border-b-[1px] border-b-steevanz-black h-[80px] w-full"
+                  className="border-b-[1px] border-b-steevanz-black h-[80px] w-[325px]"
                   placeholder="Write here your message"
                 />
               </div>
             </div>
           </div>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 pt-[57px]">
           <input type="checkbox" className="checkbox-round " />
-          <label className="text-[16px] text-steevanz-black pl-[16px]">
+          <label className="text-[12px] md:text-[16px] text-steevanz-black pl-[16px]">
             Add a delivery address different from the billing address.
           </label>
           <br />
         </div>
-        <div className="flex justify-between px-[40px] mt-[50px] mb-[90px]">
+        <div className="navigation-buttons">
           <button className="light-btn" onClick={() => navigate("/cart")}>
             Previous
           </button>

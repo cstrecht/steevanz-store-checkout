@@ -36,6 +36,22 @@
     @apply flex font-cormorant text-[40px] md:text-[48px] uppercase;
   }
 
+  /* Informations page styles */
+  .bar-total {
+    @apply w-full bg-steevanz-light-gray pl-[41px] font-bold text-steevanz-gray h-[58px] md:h-[68px] md:text-[24px];
+  }
+
+  /* Data Form styles:  */
+  .data-form-page {
+    @apply flex flex-col xl:flex-row md:justify-between;
+  }
+  .data-form-grid {
+    @apply grid sm:grid-cols-1 md:grid-cols-2 gap-4 pt-6 md:pt-[84px];
+  }
+  .data-form-input {
+    @apply border-b-[1px] border-b-steevanz-black w-[325px];
+  }
+
   /* Footer styles: */
   footer {
     @apply bg-steevanz-black bottom-0 z-20 w-full flex flex-col md:flex-row justify-around text-white font-roboto h-fit md:h-[166px] items-center;
@@ -59,6 +75,9 @@
   }
   .light-btn {
     @apply border border-steevanz-black bg-white text-steevanz-black rounded-full py-[5px] px-[30px] text-[20px] uppercase font-roboto hover:bg-steevanz-black hover:text-white;
+  }
+  .navigation-buttons {
+    @apply flex justify-between  mt-[50px] mb-[90px];
   }
 
   /* "Free Delivery" bar styles: */
