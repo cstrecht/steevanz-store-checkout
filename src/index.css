@@ -40,16 +40,30 @@
   .bar-total {
     @apply w-full bg-steevanz-light-gray pl-[41px] font-bold text-steevanz-gray h-[58px] md:h-[68px] md:text-[24px];
   }
+  .bar-total-title {
+    @apply pt-[20px] text-[16px] md:text-[24px];
+  }
+  .bar-total-subtitle {
+    @apply font-light text-steevanz-gray text-[12px] md:text-[16px] pl-[20px];
+  }
 
   /* Data Form styles:  */
   .data-form-page {
-    @apply flex flex-col xl:flex-row md:justify-between;
+    @apply flex flex-col lg:flex-row md:justify-between;
   }
   .data-form-grid {
     @apply grid sm:grid-cols-1 md:grid-cols-2 gap-4 pt-6 md:pt-[84px];
   }
   .data-form-input {
     @apply border-b-[1px] border-b-steevanz-black w-[325px];
+  }
+
+  /* Card details Form styles */
+  .card-details-page {
+    @apply grid grid-cols-1 w-[400px] md:w-[555px]  md:gap-x-24 gap-y-10 pt-[55px];
+  }
+  .card-details-input {
+    @apply border-b-[1px] border-b-steevanz-black w-full;
   }
 
   /* Footer styles: */
@@ -91,7 +105,6 @@
   .page-location {
     @apply text-[20px] md:text-[24px] pl-[10px] font-light;
   }
-
   .checkout-bar {
     @apply flex absolute mt-[73px] justify-between items-center px-[40px] py-[12px] text-[18px] md:text-[24px] w-full bg-steevanz-black text-white h-[80px];
   }
@@ -100,5 +113,17 @@
   }
   .label {
     @apply text-[14px] text-steevanz-gray font-light;
+  }
+  .resume-btn {
+    @apply flex justify-between h-[40px] w-56 lg:w-[555px] bg-steevanz-light-gray rounded-md shadow-lg hover:cursor-pointer;
+  }
+  .checkbox-round {
+    @apply w-[16px] h-[16px] bg-white rounded-full align-middle border-2 border-steevanz-black appearance-none outline-none hover:cursor-pointer;
+  }
+  .checkbox-round:checked {
+    @apply bg-steevanz-black;
+  }
+  .checkbox-label {
+    @apply text-[12px] md:text-[16px] text-steevanz-black pl-[16px];
   }
 }

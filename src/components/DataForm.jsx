@@ -263,8 +263,8 @@ function DataForm() {
           </div>
         </div>
         <div className="col-span-2 pt-[57px]">
-          <input type="checkbox" className="checkbox-round " />
-          <label className="text-[12px] md:text-[16px] text-steevanz-black pl-[16px]">
+          <input type="checkbox" className="checkbox-round" />
+          <label className="checkbox-label">
             Add a delivery address different from the billing address.
           </label>
           <br />

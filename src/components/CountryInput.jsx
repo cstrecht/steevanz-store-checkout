@@ -14,8 +14,6 @@ const CountryInput = () => {
       .then((data) => setCountries(data))
       .catch((error) => console.log(error));
   }
-
-  console.log(countries);
   useEffect(() => {
     getData();
   }, []);

@@ -14,35 +14,32 @@ function CardDetailsForm() {
 
   const onSubmit = (data) => {
     console.log(data);
-    // the reset method clears all the values
     navigate("/checkout");
     reset();
   };
-
-  //console.log(errors);
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-1 md:grid-cols-2 w-[555px] md:gap-x-24 gap-y-10 pt-[55px]">
-          <div className="col-span-1 md:col-span-2">
+        <div className="card-details-page">
+          <div className="col-span-2">
             <label className="label">Credit Card*</label>
             <br />
             <input
               type="text"
-              className="border-b-[1px] border-b-steevanz-black w-[555px]"
+              className="card-details-input"
               {...register("creditcard", {
-                required: "Card number is required.",
+                required: "Credit Card number is required.",
                 pattern: {
                   value: /^[0-9]*$/,
                   message: "Only numbers are allowed.",
                 },
                 minLength: {
                   value: 16,
-                  message: "The Credit card number should have 16 digits.",
+                  message: "The Credit Card number should have 16 digits.",
                 },
                 maxLength: {
                   value: 16,
-                  message: "The Credit card number should have 16 digits.",
+                  message: "The Credit Card number should have 16 digits.",
                 },
               })}
               onKeyUp={() => {
@@ -55,14 +52,14 @@ function CardDetailsForm() {
               </small>
             )}
           </div>
-          <div className="md:col-span-1">
+          <div className="col-span-2 md:col-span-1">
             <label className="label">Expiration Date*</label>
             <br />
             <input
               type="date"
-              className="border-b-[1px] border-b-steevanz-black w-full"
+              className="card-details-input"
               {...register("expirationdate", {
-                required: "Expiration date is required",
+                required: "Expiration date is required.",
               })}
               onKeyUp={() => {
                 trigger("expirationdate");
@@ -74,14 +71,14 @@ function CardDetailsForm() {
               </small>
             )}
           </div>
-          <div className="md:col-span-1">
+          <div className="col-span-1">
             <label className="label">CVC*</label>
             <br />
             <input
               type="text"
-              className="border-b-[1px] border-b-steevanz-black w-full"
+              className="card-details-input"
               {...register("cvc", {
-                required: "CVC number is required",
+                required: "CVC number is required.",
                 minLength: {
                   value: 3,
                   message: "The CVC number should have 3 digits.",
@@ -106,12 +103,12 @@ function CardDetailsForm() {
           <div className="col-span-2">
             <input
               type="checkbox"
-              className="checkbox-round "
+              className="checkbox-round"
               {...register("terms", {
                 required: "You must accept the terms and conditions.",
               })}
             />
-            <label className="text-[16px] text-steevanz-black pl-[16px]">
+            <label className="checkbox-label">
               I have read and accept the store's terms and conditions.*
             </label>
             <br />
@@ -120,8 +117,7 @@ function CardDetailsForm() {
             )}
           </div>
         </div>
-
-        <div className="flex justify-between px-[40px] mt-[50px] mb-[90px]">
+        <div className="navigation-buttons">
           <button
             className="light-btn"
             onClick={() => navigate("/informations")}

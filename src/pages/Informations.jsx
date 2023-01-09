@@ -19,11 +19,9 @@ function Informations() {
       <div className="space" />
       <FreeDelivery />
       <div className="bar-total">
-        <div className="pt-[20px]">
+        <div className="bar-total-title">
           Total: 50€
-          <span className="font-light text-steevanz-gray text-[12px] md:text-[16px] pl-[20px]">
-            per month
-          </span>
+          <span className="bar-total-subtitle">per month</span>
         </div>
       </div>
       <div className="p-[40px]">
