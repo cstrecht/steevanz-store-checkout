@@ -10,7 +10,7 @@ import undraw_tasks from "../assets/undraw_tasks.svg";
 import deleteicon from "../assets/deleteicon.svg";
 import group1 from "../assets/group1.svg";
 
-const FirstStep = () => {
+const Cart = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -39,7 +39,7 @@ const FirstStep = () => {
           </span>
         </div>
         <div className="flex pb-[40px]">
-          <img src={icon1} alt="icon" />
+          <img src={icon1} alt="icon number 1" />
           <span className="text-[24px] pl-[10px] font-light">
             Check your cart
           </span>
@@ -83,10 +83,10 @@ const FirstStep = () => {
         </div>
       </div>
       <div className="flex justify-between px-[40px] mt-[50px] mb-[90px]">
-        <button className="clean-cart-btn" onClick={() => navigate(-1)}>
+        <button className="light-btn" onClick={() => navigate(-1)}>
           Clean Cart
         </button>
-        <button onClick={() => navigate("/informations")} className="next-btn">
+        <button onClick={() => navigate("/informations")} className="dark-btn">
           Next
         </button>
       </div>
@@ -94,4 +94,4 @@ const FirstStep = () => {
     </>
   );
 };
-export default FirstStep;
+export default Cart;

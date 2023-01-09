@@ -22,8 +22,15 @@ const CountryInput = () => {
 
   return (
     <>
-      <select name="country" id="country">
-        <option value="">Select country</option>
+      {/* <label className="text-[14px] text-steevanz-gray font-light">
+        Country*
+      </label> */}
+      <select
+        name="country"
+        id="country"
+        className="text-[14px] text-steevanz-gray font-light border-b-[1px] border-b-steevanz-black w-[325px]"
+      >
+        <option value="country">Select country</option>
         {countries.map((country) => {
           return <option>{country.name.common}</option>;
         })}

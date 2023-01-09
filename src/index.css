@@ -9,10 +9,10 @@
   .subscribe-btn {
     @apply border border-white rounded-full py-[5px] px-[30px] text-[20px] uppercase font-roboto hover:bg-white hover:text-steevanz-black;
   }
-  .next-btn {
+  .dark-btn {
     @apply border border-steevanz-black bg-steevanz-black text-white rounded-full py-[5px] px-[30px] text-[20px] uppercase font-roboto hover:bg-white hover:text-steevanz-black;
   }
-  .clean-cart-btn {
+  .light-btn {
     @apply border border-steevanz-black bg-white text-steevanz-black rounded-full py-[5px] px-[30px] text-[20px] uppercase font-roboto hover:bg-steevanz-black hover:text-white;
   }
 

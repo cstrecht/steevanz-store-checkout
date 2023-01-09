@@ -12,10 +12,13 @@ function DataInputs(props) {
 
   return (
     <>
-      <div className="">
-        <label>{label}</label>
+      <div>
+        <label className="text-[14px] text-steevanz-gray font-light">
+          {label}
+        </label>
+        <br />
         <input
-          className="border-2"
+          className="border-b-[1px] border-b-steevanz-black w-[325px]"
           {...inputProps}
           onChange={onChange}
           onBlur={handleFocus}
