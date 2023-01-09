@@ -1,6 +1,6 @@
 # Steevanz Online Store
 
-This project is an online store where users can enter their information into input fields to make a purchase. It uses client-side validation to ensure that the users' information is submitted correctly.
+This project is an online store where users can enter their information into input fields to make a purchase. It uses client-side validation to ensure that the users' information is submitted correctly. Additionally, the design is fully responsive to look good on any device.
 
 ## Try the demo 👀
 
