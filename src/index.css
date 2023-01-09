@@ -47,7 +47,7 @@
     @apply font-light text-steevanz-gray text-[12px] md:text-[16px] pl-[20px];
   }
 
-  /* Data Form styles:  */
+  /* Data Form page styles:  */
   .data-form-page {
     @apply flex flex-col lg:flex-row md:justify-between;
   }
@@ -58,12 +58,35 @@
     @apply border-b-[1px] border-b-steevanz-black w-[325px];
   }
 
-  /* Card details Form styles */
+  /* Card details Form page styles */
   .card-details-page {
     @apply grid grid-cols-1 w-[400px] md:w-[555px]  md:gap-x-24 gap-y-10 pt-[55px];
   }
   .card-details-input {
     @apply border-b-[1px] border-b-steevanz-black w-full;
+  }
+
+  /* Checkout page styles */
+  .checkout-page {
+    @apply flex flex-col md:flex-row justify-between bg-steevanz-black h-screen text-white items-center align-middle;
+  }
+  .go-home-btn {
+    @apply border-2 border-white rounded-full px-24 md:px-[284px] py-[15.5px] text-[20px] uppercase mt-[20px] mb-6 hover:outline;
+  }
+  .checkout-img {
+    @apply mt-24 md:mt-0 h-[52px] w-[229px];
+  }
+  .checkout-greeting-title {
+    @apply font-cormorant text-[40px] md:text-[50px] mt-[90px];
+  }
+  .checkout-greeting-desc {
+    @apply font-cormorant text-[25px] mt-[10px];
+  }
+  .checkout-text {
+    @apply text-[20px] pt-[20px] w-[400px] md:w-[624px] font-light;
+  }
+  .checkout-image {
+    @apply hidden md:flex pr-[50px];
   }
 
   /* Footer styles: */
