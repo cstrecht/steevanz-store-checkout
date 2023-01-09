@@ -264,10 +264,7 @@ function DataForm() {
           <br />
         </div>
         <div className="flex justify-between px-[40px] mt-[50px] mb-[90px]">
-          <button
-            className="light-btn"
-            onClick={() => navigate("/card-details")}
-          >
+          <button className="light-btn" onClick={() => navigate("/cart")}>
             Previous
           </button>
           <button type="submit" className="dark-btn">

@@ -31,6 +31,11 @@
     @apply hidden md:flex w-[607px] h-[304px] pr-[86px] pl-[76px];
   }
 
+  /* Cart page styles */
+  .cart-title {
+    @apply flex font-cormorant text-[40px] md:text-[48px] uppercase;
+  }
+
   /* Footer styles: */
   footer {
     @apply bg-steevanz-black bottom-0 z-20 w-full flex flex-col md:flex-row justify-around text-white font-roboto h-fit md:h-[166px] items-center;
@@ -56,6 +61,21 @@
     @apply border border-steevanz-black bg-white text-steevanz-black rounded-full py-[5px] px-[30px] text-[20px] uppercase font-roboto hover:bg-steevanz-black hover:text-white;
   }
 
+  /* "Free Delivery" bar styles: */
+  .fd-bar {
+    @apply flex justify-center py-[12px] text-[12px] md:text-[20px] w-full text-center bg-steevanz-gold h-[40px] md:h-[50px] text-white;
+  }
+
+  .space {
+    @apply h-[153px];
+  }
+  .page-location {
+    @apply text-[20px] md:text-[24px] pl-[10px] font-light;
+  }
+
+  .checkout-bar {
+    @apply flex absolute mt-[73px] justify-between items-center px-[40px] py-[12px] text-[18px] md:text-[24px] w-full bg-steevanz-black text-white h-[80px];
+  }
   .dark-bg {
     @apply bg-steevanz-black;
   }
