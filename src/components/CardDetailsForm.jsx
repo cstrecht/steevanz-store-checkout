@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 
-function PaymentInput(props) {
+function CardDetailsForm() {
   const navigate = useNavigate();
   const {
     register,
@@ -15,6 +15,7 @@ function PaymentInput(props) {
   const onSubmit = (data) => {
     console.log(data);
     // the reset method clears all the values
+    navigate("/checkout");
     reset();
   };
 
@@ -22,15 +23,15 @@ function PaymentInput(props) {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-2 w-[555px] gap-x-24 gap-y-10 pt-[55px]">
-          <div className="col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-[555px] md:gap-x-24 gap-y-10 pt-[55px]">
+          <div className="col-span-1 md:col-span-2">
             <label className="label">Credit Card*</label>
             <br />
             <input
               type="text"
-              className={"border-b-[1px] border-b-steevanz-black w-[555px]"}
+              className="border-b-[1px] border-b-steevanz-black w-[555px]"
               {...register("creditcard", {
-                required: "Card number is required",
+                required: "Card number is required.",
                 pattern: {
                   value: /^[0-9]*$/,
                   message: "Only numbers are allowed.",
@@ -54,7 +55,7 @@ function PaymentInput(props) {
               </small>
             )}
           </div>
-          <div className="col-span-1 ">
+          <div className="md:col-span-1">
             <label className="label">Expiration Date*</label>
             <br />
             <input
@@ -73,7 +74,7 @@ function PaymentInput(props) {
               </small>
             )}
           </div>
-          <div className="col-span-1">
+          <div className="md:col-span-1">
             <label className="label">CVC*</label>
             <br />
             <input
@@ -105,12 +106,12 @@ function PaymentInput(props) {
           <div className="col-span-2">
             <input
               type="checkbox"
-              className="w-4 h-4 text-steevanz-black bg-steevanz-black border-steevanz-black rounded-full"
+              className="checkbox-round "
               {...register("terms", {
                 required: "You must accept the terms and conditions.",
               })}
             />
-            <label className="text-[16px] text-steevanz-black pl-[20px]">
+            <label className="text-[16px] text-steevanz-black pl-[16px]">
               I have read and accept the store's terms and conditions.*
             </label>
             <br />
@@ -119,6 +120,7 @@ function PaymentInput(props) {
             )}
           </div>
         </div>
+
         <div className="flex justify-between px-[40px] mt-[50px] mb-[90px]">
           <button
             className="light-btn"
@@ -126,12 +128,7 @@ function PaymentInput(props) {
           >
             Previous
           </button>
-          <button
-            onSubmit={handleSubmit(onSubmit)}
-            type="submit"
-            //onClick={() => navigate("/checkout")}
-            className="dark-btn"
-          >
+          <button type="submit" className="dark-btn">
             Checkout
           </button>
         </div>
@@ -139,4 +136,4 @@ function PaymentInput(props) {
     </>
   );
 }
-export default PaymentInput;
+export default CardDetailsForm;

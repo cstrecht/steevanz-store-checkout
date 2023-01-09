@@ -22,13 +22,11 @@ const CountryInput = () => {
 
   return (
     <>
-      {/* <label className="text-[14px] text-steevanz-gray font-light">
-        Country*
-      </label> */}
       <select
         name="country"
+        required
         id="country"
-        className="text-[14px] text-steevanz-gray font-light border-b-[1px] border-b-steevanz-black w-[325px]"
+        className="text-[14px] text-steevanz-gray font-light border-b-[1px] border-b-steevanz-black "
       >
         <option value="country">Select country</option>
         {countries.map((country) => {

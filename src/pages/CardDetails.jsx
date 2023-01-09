@@ -4,7 +4,7 @@ import { useState } from "react";
 
 //-- React Components --
 
-import PaymentInput from "../components/PaymentInput";
+import CardDetailsForm from "../components/CardDetailsForm";
 import Navbar from "../components/Navbar";
 import group3 from "../assets/group3.svg";
 import carbon_delivery from "../assets/carbon_delivery.svg";
@@ -83,7 +83,7 @@ function CardDetails() {
             </div>
           </div>
         </div>
-        <PaymentInput />
+        <CardDetailsForm />
         {/* make this prev and next buttons a component */}
       </div>
 

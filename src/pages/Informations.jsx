@@ -3,44 +3,19 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // -- React Components --
-import DataInput from "../components/InformationsForm/DataInput";
-import inputsBeforeCountry from "../components/InformationsForm/inputsBeforeCountry";
-import inputsAfterCountry from "../components/InformationsForm/inputsAfterCountry";
-import CountryInput from "../components/InformationsForm/CountryInput";
+// import DataInput from "../components/InformationsForm/DataInput";
+// import inputsBeforeCountry from "../components/InformationsForm/inputsBeforeCountry";
+// import inputsAfterCountry from "../components/InformationsForm/inputsAfterCountry";
+// import CountryInput from "../components/InformationsForm/CountryInput";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import carbon_delivery from "../assets/carbon_delivery.svg";
 import group2 from "../assets/group2.svg";
 import icon2 from "../assets/icon2.svg";
-import Form from "../components/InformationsForm";
+import DataForm from "../components/DataForm";
 
 function Informations() {
   const navigate = useNavigate();
-  const [values, setValues] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    phone: "",
-    country: "",
-    location: "",
-    address: "",
-    postalcode: "",
-    vatnumber: "",
-  });
-  const [focused, setFocused] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate("/card-details");
-  };
-
-  const handleFocus = (e) => {
-    setFocused(true);
-  };
-
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
 
   return (
     <>
@@ -79,49 +54,9 @@ function Informations() {
           <button className="light-btn">Company</button>
         </div>
 
-        <div className="flex justify-between">
-          <div>
-            <form
-              className="grid grid-cols-2 gap-x-[135px]"
-              onSubmit={handleSubmit}
-            >
-              {/* <Form /> */}
-              {inputsBeforeCountry.map((input) => (
-                <React.Fragment key={input.id}>
-                  <DataInput
-                    {...input}
-                    value={values[input.name]}
-                    onChange={onChange}
-                  />
-                </React.Fragment>
-              ))}
-              <CountryInput />
-              {/* {inputsAfterCountry.map((input) => (
-                <React.Fragment key={input.id}>
-                  <DataInput
-                    {...input}
-                    value={values[input.name]}
-                    onChange={onChange}
-                  />
-                </React.Fragment>
-              ))} */}
-            </form>
-            <input type="checkbox" className="checkbox-round " />
-            <label className="pl-[12px]">
-              Add a delivery address different from the billing address.
-            </label>
-          </div>
-          <div>oferta</div>
-        </div>
+        <DataForm />
       </div>
-      <div className="flex justify-between px-[40px] mt-[50px] mb-[90px]">
-        <button className="light-btn" onClick={() => navigate(-1)}>
-          Previous
-        </button>
-        <button onClick={() => navigate("/card-details")} className="dark-btn">
-          Next
-        </button>
-      </div>
+
       <Footer />
     </>
   );

@@ -10,8 +10,8 @@ input:invalid[focused="true"] ~ .span-error {
   display: block;
 }
 .checkbox-round {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   background-color: white;
   border-radius: 50%;
   vertical-align: middle;
