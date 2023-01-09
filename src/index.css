@@ -6,6 +6,46 @@
   body {
     @apply font-roboto;
   }
+  /* Navbar styles: */
+  nav {
+    @apply flex flex-wrap w-full items-center justify-between mx-auto bg-steevanz-black z-20 absolute shadow-lg h-[73px];
+  }
+  .navbar-logo {
+    @apply py-[19px] pl-10 w-[155px];
+  }
+
+  /* Homepage styles: */
+  .home-page {
+    @apply flex justify-around relative items-center bg-steevanz-black text-white shadow-lg;
+  }
+  .home-page-container {
+    @apply w-[631px] px-[40px] md:pr-0 py-[185px];
+  }
+  .home-page-title {
+    @apply font-cormorant text-[48px] uppercase;
+  }
+  .home-page-description {
+    @apply text-[16px] md:text-[24px] pt-[30px];
+  }
+  .home-page-img {
+    @apply hidden md:flex w-[607px] h-[304px] pr-[86px] pl-[76px];
+  }
+
+  /* Footer styles: */
+  footer {
+    @apply bg-steevanz-black bottom-0 z-20 w-full flex flex-col md:flex-row justify-around text-white font-roboto h-fit md:h-[166px] items-center;
+  }
+  .footer-logo {
+    @apply w-24 mt-3 md:mt-0 md:w-[211px] pb-2;
+  }
+  .footer-link {
+    @apply flex flex-col text-xs text-center md:text-left md:text-[16px];
+  }
+  .footer-social-icons {
+    @apply flex space-x-4 bottom-0 py-4 md:pt-[100px];
+  }
+
+  /* Buttons styles: */
   .subscribe-btn {
     @apply border border-white rounded-full py-[5px] px-[30px] text-[20px] uppercase font-roboto hover:bg-white hover:text-steevanz-black;
   }
