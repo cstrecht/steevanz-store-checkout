@@ -2,7 +2,6 @@ import React from "react";
 import CardDetailsForm from "../components/CardDetailsForm";
 import Navbar from "../components/Navbar";
 import group3 from "../assets/group3.svg";
-import carbon_delivery from "../assets/carbon_delivery.svg";
 import icon4 from "../assets/icon4.svg";
 import visa from "../assets/visa.svg";
 import Footer from "../components/Footer";
