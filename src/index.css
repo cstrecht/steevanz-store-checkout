@@ -19,4 +19,7 @@
   .dark-bg {
     @apply bg-steevanz-black;
   }
+  .label {
+    @apply text-[14px] text-steevanz-gray font-light;
+  }
 }

@@ -10,6 +10,7 @@ module.exports = {
       "steevanz-gold": "#C6B784",
       "steevanz-gray": "#5B5B5B",
       "steevanz-light-gray": "#E9E9E9",
+      "danger-red": "#FF0000",
     },
     extend: {
       fontFamily: {

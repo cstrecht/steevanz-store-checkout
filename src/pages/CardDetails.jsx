@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 //-- React Components --
-import paymentInputs from "../components/CardDetailsForm/paymentInputs";
-import PaymentInput from "../components/CardDetailsForm/PaymentInput";
+
+import PaymentInput from "../components/PaymentInput";
 import Navbar from "../components/Navbar";
 import group3 from "../assets/group3.svg";
 import carbon_delivery from "../assets/carbon_delivery.svg";
@@ -24,6 +24,7 @@ function CardDetails() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     navigate("/checkout");
   };
 
@@ -57,57 +58,35 @@ function CardDetails() {
         </div>
       </div>
 
-      <div className="p-[40px]">
-        <div className="flex">
-          <img src={icon4} alt="icon number 2" />
-          <span className="text-[24px] pl-[10px] font-light">Payment</span>
-        </div>
-
-        <div className="flex justify-between pt-[30px]">
+      <div className="m-[40px]">
+        {" "}
+        <div className="">
           <div className="flex">
-            <img src={visa} alt="" />
-            <p className="pl-[20px] text-[16px] text-steevanz-gray">
-              Pay securely with your credit card.
-            </p>
+            <img src={icon4} alt="icon number 2" />
+            <span className="text-[24px] pl-[10px] font-light">Payment</span>
           </div>
-          <div className="flex justify-between h-[40px] w-[555px] bg-steevanz-light-gray rounded-md shadow-lg hover:cursor-pointer">
-            <div className="text-[14px] font-bold text-steevanz-gray pl-[10px] pt-[11px]">
-              Resume
+
+          <div className="flex justify-between pt-[30px]">
+            <div className="flex">
+              <img src={visa} alt="" />
+              <p className="pl-[20px] text-[16px] text-steevanz-gray">
+                Pay securely with your credit card.
+              </p>
             </div>
-            <div className="p-[17px]">
-              <img src={downarrow} alt="" />
+            <div className="flex justify-between h-[40px] w-[555px] bg-steevanz-light-gray rounded-md shadow-lg hover:cursor-pointer">
+              <div className="text-[14px] font-bold text-steevanz-gray pl-[10px] pt-[11px]">
+                Resume
+              </div>
+              <div className="p-[17px]">
+                <img src={downarrow} alt="" />
+              </div>
             </div>
           </div>
         </div>
-
-        <form className="m-8" onSubmit={handleSubmit}>
-          {paymentInputs.map((input) => (
-            <React.Fragment key={input.id}>
-              <PaymentInput
-                {...input}
-                value={values[input.name]}
-                onChange={onChange}
-              />
-            </React.Fragment>
-          ))}
-
-          <div>
-            <button onClick={() => navigate(-1)}>Prev</button>
-            <button>
-              <input type="submit" value="Next" />
-            </button>
-          </div>
-        </form>
+        <PaymentInput />
+        {/* make this prev and next buttons a component */}
       </div>
-      {/* make this prev and next buttons a component */}
-      <div className="flex justify-between px-[40px] mt-[50px] mb-[90px]">
-        <button className="light-btn" onClick={() => navigate("/cart")}>
-          Previous
-        </button>
-        <button onClick={() => navigate("/checkout")} className="dark-btn">
-          Checkout
-        </button>
-      </div>
+
       <Footer />
     </>
   );

@@ -13,9 +13,7 @@ function DataInputs(props) {
   return (
     <>
       <div>
-        <label className="text-[14px] text-steevanz-gray font-light">
-          {label}
-        </label>
+        <label className="label">{label}</label>
         <br />
         <input
           className="border-b-[1px] border-b-steevanz-black w-[325px]"
