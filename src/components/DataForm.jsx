@@ -23,7 +23,7 @@ function DataForm() {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row md:justify-between">
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 pt-6 md:pt-[84px]">
             <div className="md:col-span-1">
               <label className="label">Firstname(s)*</label>
@@ -221,7 +221,7 @@ function DataForm() {
           <div className="flex flex-col">
             <div className="pt-[80px] text-steevanz-black">
               <div className="absolute">
-                <div className="text-[20px]">Is this purchase an offer?</div>
+                <div className="md:text-[20px]">Is this purchase an offer?</div>
                 <div className="text-[14px]">Add a custom message</div>
               </div>
               <img className="relative -mt-4 mb-[40px]" src={offer} alt="" />
